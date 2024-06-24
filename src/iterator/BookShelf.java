@@ -3,6 +3,10 @@ package iterator;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * ConcreteAggreate
+ * Iterable 구현체적인 집합체 역할을 한다.
+ */
 public class BookShelf implements Iterable<Book>, Cloneable {
 
     private ArrayList<Book> books = new ArrayList<>();
@@ -34,6 +38,7 @@ public class BookShelf implements Iterable<Book>, Cloneable {
 
     @Override
     public BookShelf clone() {
+        // 이펙티브 자바를 보고 인지할 수 있는 참조 객체 클론 주의사항
         return new BookShelf(new ArrayList<>(books));
     }
 

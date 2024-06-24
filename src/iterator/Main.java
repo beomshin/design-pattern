@@ -4,7 +4,6 @@ import java.util.Iterator;
 
 public class Main {
 
-
     public static void main(String[] args) {
         BookShelf bookShelf = new BookShelf();
         bookShelf.appendBook(new Book("Book1"));

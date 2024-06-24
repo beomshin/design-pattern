@@ -1,5 +1,8 @@
 package iterator;
 
+/**
+ * 원소 클래스
+ */
 public class Book {
 
     private String name;
