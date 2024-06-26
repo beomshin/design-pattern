@@ -10,6 +10,7 @@ public class Main {
         Print_2 p2 = new PrintBanner_2("Hello");
         p2.printWeak();
         p.printStrong();
+
     }
 
 
