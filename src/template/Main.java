@@ -10,5 +10,11 @@ public class Main {
         d1.display();
 
         d2.display();
+
+        AbstractDisplayInterface i1 = new CharDisplayInterface('H');
+        StringDisplayInterface i2 = new StringDisplayInterface("Hello, world.");
+
+        i1.display();
+        i2.display();
     }
 }
