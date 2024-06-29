@@ -1,6 +1,6 @@
 package builder;
 
-public class TextBuilder extends Builder{
+public class TextBuilder implements BuilderIf{
 
     private StringBuilder sb = new StringBuilder();
 

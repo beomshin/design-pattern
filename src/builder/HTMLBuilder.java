@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 
-public class HTMLBuilder extends Builder{
+public class HTMLBuilder implements BuilderIf {
 
     private String filename = "untitled.html";
     private StringBuilder sb = new StringBuilder();

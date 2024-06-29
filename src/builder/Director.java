@@ -2,10 +2,10 @@ package builder;
 
 public class Director {
 
-    private Builder builder;
+    private BuilderIf builder;
 
 
-    public Director(Builder builder) {
+    public Director(BuilderIf builder) {
         this.builder = builder;
     }
 
