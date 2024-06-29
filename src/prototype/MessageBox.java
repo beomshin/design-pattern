@@ -1,12 +1,16 @@
 package prototype;
 
-public class MessageBox implements Product{
+public class MessageBox implements Product {
 
 
     private char decochar;
 
     public MessageBox(char decochar) {
         this.decochar = decochar;
+    }
+
+    private MessageBox(MessageBox messageBox) {
+        this.decochar = messageBox.decochar;
     }
 
     @Override
@@ -25,12 +29,13 @@ public class MessageBox implements Product{
 
     @Override
     public Product createCopy() {
-        Product p = null;
-        try {
-            p = (Product) clone();
-         } catch (CloneNotSupportedException e) {
-            e.printStackTrace();;
-        }
-        return p;
+//        Product p = null;
+//        try {
+//            p = (Product) clone();
+//         } catch (CloneNotSupportedException e) {
+//            e.printStackTrace();;
+//        }
+//        return p;
+        return new MessageBox(this);
     }
 }

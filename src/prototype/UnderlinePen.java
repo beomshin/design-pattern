@@ -1,11 +1,15 @@
 package prototype;
 
-public class UnderlinePen implements Product{
+public class UnderlinePen implements Product {
 
     private char ulchar;
 
     public UnderlinePen(char ulchar) {
         this.ulchar = ulchar;
+    }
+
+    private UnderlinePen(UnderlinePen underlinePen) {
+        this.ulchar = underlinePen.ulchar;
     }
 
     @Override
@@ -20,12 +24,12 @@ public class UnderlinePen implements Product{
 
     @Override
     public Product createCopy() {
-        Product p = null;
-        try {
-            p = (Product) clone();
-         } catch (CloneNotSupportedException e) {
-            e.printStackTrace();;
-        }
-        return p;
+//        Product p = null;
+//        try {
+//            p = (Product) clone();
+//         } catch (CloneNotSupportedException e) {
+//            e.printStackTrace();;
+//        }
+        return new UnderlinePen(this);
     }
 }
