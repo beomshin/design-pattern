@@ -3,6 +3,11 @@ package visitor;
 import visitor.Directory;
 import visitor.File;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -29,9 +34,28 @@ public class Main {
         youngjin.add(new File("diary.html",100));
         youngjin.add(new File("Composite.java", 200));
         gildong.add(new File("memo.tex", 300));
+        gildong.add(new File("index.html", 350));
         dojun.add(new File("game.doc", 400));
         dojun.add(new File("junk.mail", 500));
 
         rootdir.accept(new ListVisitor());
+
+        FileFindVisitor ffv = new FileFindVisitor(".html");
+        rootdir.accept(ffv);
+
+        System.out.println("HTML files are:");
+        for (File file : ffv.getFoundFiles()) {
+            System.out.println(file);
+        }
+
+        String dirname = "C:\\workspace\\design-pattern\\src\\visitor";
+
+        try {
+            MyFileVisitor visitor = new MyFileVisitor();
+            Path path = Paths.get(dirname);
+            Files.walkFileTree(path, visitor);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
