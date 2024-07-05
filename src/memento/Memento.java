@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Memento {
 
-    public int money;
-    public List<String> fruits;
+    private int money;
+    private List<String> fruits;
 
     Memento(int money) {
         this.money = money;
@@ -17,7 +17,7 @@ public class Memento {
         return money;
     }
 
-    public List<String> getFruits() {
+    List<String> getFruits() {
         return fruits;
     }
 
