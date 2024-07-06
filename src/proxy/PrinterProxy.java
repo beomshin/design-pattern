@@ -3,7 +3,7 @@ package proxy;
 public class PrinterProxy implements Printable{
 
     private String name;
-    private Printer real;
+    private Printable real;
 
     public PrinterProxy() {
         this.name = "No Name";
