@@ -39,10 +39,14 @@ public class SafeFrame extends Frame implements ActionListener, Context {
 
         setVisible(true);
 
-        buttonUse.addActionListener(this);
-        buttonAlarm.addActionListener(this);
-        buttonPhone.addActionListener(this);
-        buttonExit.addActionListener(this);
+//        buttonUse.addActionListener(this);
+//        buttonAlarm.addActionListener(this);
+//        buttonPhone.addActionListener(this);
+//        buttonExit.addActionListener(this);
+        buttonUse.addActionListener((e) -> state.doUse(this));
+        buttonAlarm.addActionListener((e) -> state.doAlarm(this));
+        buttonPhone.addActionListener((e) -> state.doPhone(this));
+        buttonExit.addActionListener((e) -> System.exit(0));
     }
 
     @Override
