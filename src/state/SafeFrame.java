@@ -51,7 +51,7 @@ public class SafeFrame extends Frame implements ActionListener, Context {
         if (e.getSource() == buttonUse) {
              state.doUse(this);
         } else if (e.getSource() == buttonAlarm) {
-            state.doPhone(this);
+            state.doAlarm(this);
         } else if (e.getSource() == buttonPhone) {
             state.doPhone(this);
         } else if (e.getSource() == buttonExit) {
